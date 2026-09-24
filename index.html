@@ -1,35 +1,300 @@
+```html
 <!doctype html>
 <html lang="pt-BR">
-<head><meta name="color-scheme" content="dark">
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#07090d"><meta name="description" content="BotOfertas — ofertas, cupons e achados em um só lugar.">
-<title>BotOfertas — Ofertas que chegam até você</title><style>
-:root{--bg:#07090d;--card:#0e131a;--card2:#121922;--line:#202a35;--text:#f6f8fb;--muted:#9ba7b5;--yellow:#ffd83d;--green:#3be58a;--blue:#5ec4ff;--shadow:0 22px 70px rgba(0,0,0,.42);--r:20px}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(900px 420px at 50% -140px,rgba(255,216,61,.13),transparent 70%),var(--bg);color:var(--text);font:15px/1.6 Inter,Segoe UI,Arial,sans-serif}a{color:inherit}.wrap{width:min(1160px,calc(100% - 32px));margin:auto}.top{position:sticky;top:0;z-index:20;background:rgba(7,9,13,.9);border-bottom:1px solid rgba(255,255,255,.07);backdrop-filter:blur(16px)}.nav{min-height:70px;display:flex;align-items:center;gap:22px}.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:950;letter-spacing:-.5px;margin-right:auto}.logo{width:40px;height:40px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,#fff27c,#f1ae13);box-shadow:0 10px 30px rgba(255,216,61,.18)}.navlinks{display:flex;gap:4px}.navlinks a,.drop a{padding:10px 12px;border-radius:11px;text-decoration:none;color:#aeb7c2;font-size:13px;font-weight:800}.navlinks a:hover,.navlinks a.active,.drop a:hover{background:#fff;color:#101318}.menu{position:relative}.dots{width:42px;height:42px;border:1px solid var(--line);border-radius:12px;background:#10151c;color:#fff;font-size:23px;cursor:pointer}.drop{position:absolute;right:0;top:50px;width:245px;padding:8px;background:#0e131a;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);display:none}.menu.open .drop{display:grid}.drop a{display:block}.hero{padding:90px 0 58px;text-align:center}.pill{display:inline-block;border:1px solid #4b421e;background:#17160d;color:#ffe66a;border-radius:999px;padding:7px 11px;font-size:10px;font-weight:950;letter-spacing:1.2px}.hero h1{font-size:clamp(46px,8vw,82px);line-height:.96;letter-spacing:-4px;margin:20px auto 18px;max-width:900px}.hero h1 em{font-style:normal;color:var(--yellow)}.hero p,.pagehero p{max-width:760px;margin:auto;color:var(--muted);font-size:17px}.actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:25px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 16px;border-radius:13px;border:1px solid var(--line);background:var(--card2);text-decoration:none;font-size:13px;font-weight:900}.btn:hover{transform:translateY(-1px);filter:brightness(1.08)}.green{background:var(--green);color:#04150c;border-color:transparent}.blue{background:var(--blue);color:#04141d;border-color:transparent}.yellow{background:var(--yellow);color:#171305;border-color:transparent}.tabs{display:flex;gap:5px;overflow:auto;padding:5px;border:1px solid var(--line);border-radius:16px;background:#0b0f15}.tabs a{white-space:nowrap;text-decoration:none;color:#a7b0bb;font-size:12px;font-weight:850;padding:9px 12px;border-radius:10px}.tabs a:hover,.tabs a.active{background:#fff;color:#111}.section{padding:25px 0 70px}.eyebrow{font-size:10px;font-weight:950;letter-spacing:1.8px;color:#ffe15a}.section h2{font-size:35px;letter-spacing:-1.5px;margin:7px 0}.lead{max-width:760px;color:var(--muted)}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card,.metric,.panel,.faq details{border:1px solid var(--line);background:linear-gradient(180deg,#111720,#0b0f15);border-radius:var(--r)}.metric{padding:20px}.metric b{font-size:24px}.metric strong{display:block;margin-top:8px;font-size:14px}.metric span{display:block;color:var(--muted);font-size:12px;margin-top:3px}.card{padding:23px}.icon{font-size:25px}.card h3{margin:12px 0 6px}.card p,.panel p,.faq p{color:var(--muted);font-size:13px;line-height:1.7}.split{display:grid;grid-template-columns:1fr 1fr;gap:14px}.panel{padding:24px}.rows{margin-top:15px}.row{display:flex;gap:10px;border-top:1px solid rgba(255,255,255,.07);padding:11px 0;font-size:13px}.check{width:23px;height:23px;display:grid;place-items:center;background:#fff1;border-radius:8px;flex:none}.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}.chip{padding:9px 12px;border:1px solid var(--line);border-radius:999px;background:#10161d;color:#d8dde4;font-size:12px}.callout{margin:25px auto 65px;padding:31px;border:1px solid #4b421e;border-radius:25px;background:radial-gradient(circle at 50% 0,rgba(255,216,61,.12),transparent 55%),#10150f}.callout h2{margin:0 0 7px}.callout p{color:var(--muted);max-width:720px}.pagehero{padding:72px 0 35px}.pagehero h1{font-size:clamp(38px,6vw,62px);line-height:1;letter-spacing:-3px;margin:13px 0}.notice{margin-top:18px;padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:#0d1319;color:#aab4c0;font-size:12px}.faq{display:grid;gap:9px}.faq details{padding:15px 18px}.faq summary{cursor:pointer;font-weight:850;font-size:13px}.footer{border-top:1px solid var(--line);padding:30px 0 45px;color:#7d8794;font-size:12px}.footergrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}.footer h4{color:#dce1e7;margin:0 0 10px}.footer a{display:block;text-decoration:none;color:#87919d;margin:7px 0}.status{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);padding:7px 10px;border-radius:999px;color:#b8c0cb;font-size:11px;font-weight:800}.dot{width:7px;height:7px;border-radius:50%;background:#6d7681}.chat{display:grid;grid-template-columns:1fr .75fr;gap:14px}.chatbox{border:1px solid var(--line);border-radius:23px;background:#0e141b;padding:22px}.bubble{max-width:82%;padding:11px 13px;border-radius:14px;background:#181f28;color:#dce2e9;font-size:12px;margin-top:11px}.bubble.me{margin-left:auto;background:#29250e;color:#ffe979}@media(max-width:850px){.navlinks{display:none}.grid4{grid-template-columns:1fr 1fr}.grid3,.split,.chat,.footergrid{grid-template-columns:1fr}}@media(max-width:540px){.grid4,.grid3{grid-template-columns:1fr}.hero{padding-top:62px}.hero h1{letter-spacing:-2.5px}.section h2{font-size:29px}}
-.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px}.section-head h2{margin:6px 0}.section-head p{color:var(--muted);max-width:720px;margin:0}.community-home{padding:15px 0 35px}.community-grid{margin-top:20px}.community-card{position:relative;overflow:hidden;padding:22px;border:1px solid var(--line);background:linear-gradient(145deg,#121922,#0b0f15);border-radius:22px;min-height:230px;display:flex;flex-direction:column}.community-card:before{content:"";position:absolute;inset:0 auto auto 0;width:100%;height:2px;background:linear-gradient(90deg,transparent,#ffffff55,transparent)}.community-icon{font-size:30px;margin-bottom:16px}.community-label{font-size:10px;font-weight:950;letter-spacing:1.5px;color:#9da8b5}.community-card h3{margin:6px 0}.community-card p{color:var(--muted);font-size:13px;line-height:1.65;margin:0 0 20px}.community-card .btn{margin-top:auto;align-self:flex-start}.text-link{display:inline-block;margin-top:16px;text-decoration:none;color:#ffe66a;font-size:13px;font-weight:900}.text-link:hover{text-decoration:underline}.footerbar{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.tabs{display:none}@media(max-width:850px){.section-head{align-items:flex-start}.community-card{min-height:0}}
+<head>
+<meta name="color-scheme" content="dark">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#07090d">
+<meta name="description" content="BotOfertas — ofertas, cupons e achados em um só lugar.">
+<title>BotOfertas — Ofertas que chegam até você</title>
 
-/* BotOfertas — detalhes de interação */
-.home-community{padding:38px 0 20px}.home-community-title{max-width:820px;margin:0 auto 20px;text-align:center}.home-community-title h1{font-size:clamp(30px,5vw,52px);line-height:1;letter-spacing:-2.5px;margin:8px 0}.home-community-title h1 em{font-style:normal;color:var(--yellow)}.home-community-title p{color:var(--muted);margin:0 auto;max-width:650px}.home-hero{text-align:center;padding:70px 0 30px}.home-hero h2{font-size:clamp(42px,7vw,72px);line-height:.98;letter-spacing:-3.5px;margin:18px auto;max-width:850px}.home-hero h2 em{font-style:normal;color:var(--yellow)}.home-hero p{max-width:650px;margin:auto;color:var(--muted);font-size:16px}.btn-main{padding:14px 22px;box-shadow:0 12px 35px rgba(59,229,138,.14)}.home-features{padding-top:25px}.sound-toggle{position:fixed;right:20px;bottom:20px;z-index:30;width:44px;height:44px;border:1px solid var(--line);border-radius:50%;background:rgba(14,19,26,.92);color:#fff;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.3);backdrop-filter:blur(10px);transition:transform .2s,background .2s}.sound-toggle:hover{transform:translateY(-2px);background:#171e27}.lift-in{animation:rise .45s ease both}.community-card{transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}.community-card:hover,.card:hover,.metric:hover,.panel:hover{transform:translateY(-4px);border-color:#33404d;box-shadow:0 18px 45px rgba(0,0,0,.18)}@keyframes rise{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+<style>
+:root{--bg:#07090d;--card:#0e131a;--card2:#121922;--line:#202a35;--text:#f6f8fb;--muted:#9ba7b5;--yellow:#ffd83d;--green:#3be58a;--blue:#5ec4ff;--shadow:0 22px 70px rgba(0,0,0,.42);--r:20px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(900px 420px at 50% -140px,rgba(255,216,61,.13),transparent 70%),var(--bg);color:var(--text);font:15px/1.6 Inter,Segoe UI,Arial,sans-serif}
+a{color:inherit}
+.wrap{width:min(1160px,calc(100% - 32px));margin:auto}
+.top{position:sticky;top:0;z-index:20;background:rgba(7,9,13,.9);border-bottom:1px solid rgba(255,255,255,.07);backdrop-filter:blur(16px)}
+.nav{min-height:70px;display:flex;align-items:center;gap:22px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:950;letter-spacing:-.5px;margin-right:auto}
+.logo{width:40px;height:40px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,#fff27c,#f1ae13);box-shadow:0 10px 30px rgba(255,216,61,.18)}
+.navlinks{display:flex;gap:4px}
+.navlinks a,.drop a{padding:10px 12px;border-radius:11px;text-decoration:none;color:#aeb7c2;font-size:13px;font-weight:800}
+.navlinks a:hover,.navlinks a.active,.drop a:hover{background:#fff;color:#101318}
+.menu{position:relative}
+.dots{width:42px;height:42px;border:1px solid var(--line);border-radius:12px;background:#10151c;color:#fff;font-size:23px;cursor:pointer}
+.drop{position:absolute;right:0;top:50px;width:245px;padding:8px;background:#0e131a;border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow);display:none}
+.menu.open .drop{display:grid}
+.drop a{display:block}
+.hero{padding:90px 0 58px;text-align:center}
+.pill{display:inline-block;border:1px solid #4b421e;background:#17160d;color:#ffe66a;border-radius:999px;padding:7px 11px;font-size:10px;font-weight:950;letter-spacing:1.2px}
+.hero h1{font-size:clamp(46px,8vw,82px);line-height:.96;letter-spacing:-4px;margin:20px auto 18px;max-width:900px}
+.hero h1 em{font-style:normal;color:var(--yellow)}
+.hero p,.pagehero p{max-width:760px;margin:auto;color:var(--muted);font-size:17px}
+.actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:25px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 16px;border-radius:13px;border:1px solid var(--line);background:var(--card2);text-decoration:none;font-size:13px;font-weight:900}
+.btn:hover{transform:translateY(-1px);filter:brightness(1.08)}
+.green{background:var(--green);color:#04150c;border-color:transparent}
+.blue{background:var(--blue);color:#04141d;border-color:transparent}
+.yellow{background:var(--yellow);color:#171305;border-color:transparent}
+.tabs{display:flex;gap:5px;overflow:auto;padding:5px;border:1px solid var(--line);border-radius:16px;background:#0b0f15}
+.tabs a{white-space:nowrap;text-decoration:none;color:#a7b0bb;font-size:12px;font-weight:850;padding:9px 12px;border-radius:10px}
+.tabs a:hover,.tabs a.active{background:#fff;color:#111}
+.section{padding:25px 0 70px}
+.eyebrow{font-size:10px;font-weight:950;letter-spacing:1.8px;color:#ffe15a}
+.section h2{font-size:35px;letter-spacing:-1.5px;margin:7px 0}
+.lead{max-width:760px;color:var(--muted)}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card,.metric,.panel,.faq details{border:1px solid var(--line);background:linear-gradient(180deg,#111720,#0b0f15);border-radius:var(--r)}
+.metric{padding:20px}
+.metric b{font-size:24px}
+.metric strong{display:block;margin-top:8px;font-size:14px}
+.metric span{display:block;color:var(--muted);font-size:12px;margin-top:3px}
+.card{padding:23px}
+.icon{font-size:25px}
+.card h3{margin:12px 0 6px}
+.card p,.panel p,.faq p{color:var(--muted);font-size:13px;line-height:1.7}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.panel{padding:24px}
+.rows{margin-top:15px}
+.row{display:flex;gap:10px;border-top:1px solid rgba(255,255,255,.07);padding:11px 0;font-size:13px}
+.check{width:23px;height:23px;display:grid;place-items:center;background:#fff1;border-radius:8px;flex:none}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.chip{padding:9px 12px;border:1px solid var(--line);border-radius:999px;background:#10161d;color:#d8dde4;font-size:12px}
+.callout{margin:25px auto 65px;padding:31px;border:1px solid #4b421e;border-radius:25px;background:radial-gradient(circle at 50% 0,rgba(255,216,61,.12),transparent 55%),#10150f}
+.callout h2{margin:0 0 7px}
+.callout p{color:var(--muted);max-width:720px}
+.pagehero{padding:72px 0 35px}
+.pagehero h1{font-size:clamp(38px,6vw,62px);line-height:1;letter-spacing:-3px;margin:13px 0}
+.notice{margin-top:18px;padding:14px 16px;border:1px solid var(--line);border-radius:14px;background:#0d1319;color:#aab4c0;font-size:12px}
+.faq{display:grid;gap:9px}
+.faq details{padding:15px 18px}
+.faq summary{cursor:pointer;font-weight:850;font-size:13px}
+.footer{border-top:1px solid var(--line);padding:30px 0 45px;color:#7d8794;font-size:12px}
+.footergrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}
+.footer h4{color:#dce1e7;margin:0 0 10px}
+.footer a{display:block;text-decoration:none;color:#87919d;margin:7px 0}
+.status{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--line);padding:7px 10px;border-radius:999px;color:#b8c0cb;font-size:11px;font-weight:800}
+.dot{width:7px;height:7px;border-radius:50%;background:#6d7681}
+.chat{display:grid;grid-template-columns:1fr .75fr;gap:14px}
+.chatbox{border:1px solid var(--line);border-radius:23px;background:#0e141b;padding:22px}
+.bubble{max-width:82%;padding:11px 13px;border-radius:14px;background:#181f28;color:#dce2e9;font-size:12px;margin-top:11px}
+.bubble.me{margin-left:auto;background:#29250e;color:#ffe979}
 
+@media(max-width:850px){
+.navlinks{display:none}
+.grid4{grid-template-columns:1fr 1fr}
+.grid3,.split,.chat,.footergrid{grid-template-columns:1fr}
+}
+
+@media(max-width:540px){
+.grid4,.grid3{grid-template-columns:1fr}
+.hero{padding-top:62px}
+.hero h1{letter-spacing:-2.5px}
+.section h2{font-size:29px}
+}
+
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px}
+.section-head h2{margin:6px 0}
+.section-head p{color:var(--muted);max-width:720px;margin:0}
+.community-home{padding:15px 0 35px}
+.community-grid{margin-top:20px}
+.community-card{position:relative;overflow:hidden;padding:22px;border:1px solid var(--line);background:linear-gradient(145deg,#121922,#0b0f15);border-radius:22px;min-height:230px;display:flex;flex-direction:column}
+.community-card:before{content:"";position:absolute;inset:0 auto auto 0;width:100%;height:2px;background:linear-gradient(90deg,transparent,#ffffff55,transparent)}
+.community-icon{font-size:30px;margin-bottom:16px}
+.community-label{font-size:10px;font-weight:950;letter-spacing:1.5px;color:#9da8b5}
+.community-card h3{margin:6px 0}
+.community-card p{color:var(--muted);font-size:13px;line-height:1.65;margin:0 0 20px}
+.community-card .btn{margin-top:auto;align-self:flex-start}
+.text-link{display:inline-block;margin-top:16px;text-decoration:none;color:#ffe66a;font-size:13px;font-weight:900}
+.text-link:hover{text-decoration:underline}
+.footerbar{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.tabs{display:none}
+
+@media(max-width:850px){
+.section-head{align-items:flex-start}
+.community-card{min-height:0}
+}
+
+.home-community{padding:38px 0 20px}
+.home-community-title{max-width:820px;margin:0 auto 20px;text-align:center}
+.home-community-title h1{font-size:clamp(30px,5vw,52px);line-height:1;letter-spacing:-2.5px;margin:8px 0}
+.home-community-title h1 em{font-style:normal;color:var(--yellow)}
+.home-community-title p{color:var(--muted);margin:0 auto;max-width:650px}
+.home-hero{text-align:center;padding:70px 0 30px}
+.home-hero h2{font-size:clamp(42px,7vw,72px);line-height:.98;letter-spacing:-3.5px;margin:18px auto;max-width:850px}
+.home-hero h2 em{font-style:normal;color:var(--yellow)}
+.home-hero p{max-width:650px;margin:auto;color:var(--muted);font-size:16px}
+.btn-main{padding:14px 22px;box-shadow:0 12px 35px rgba(59,229,138,.14)}
+.home-features{padding-top:25px}
+.sound-toggle{position:fixed;right:20px;bottom:20px;z-index:30;width:44px;height:44px;border:1px solid var(--line);border-radius:50%;background:rgba(14,19,26,.92);color:#fff;cursor:pointer;box-shadow:0 10px 30px rgba(0,0,0,.3);backdrop-filter:blur(10px);transition:transform .2s,background .2s}
+.sound-toggle:hover{transform:translateY(-2px);background:#171e27}
+.lift-in{animation:rise .45s ease both}
+.community-card{transition:transform .22s ease,border-color .22s ease,box-shadow .22s ease}
+.community-card:hover,.card:hover,.metric:hover,.panel:hover{transform:translateY(-4px);border-color:#33404d;box-shadow:0 18px 45px rgba(0,0,0,.18)}
+
+@keyframes rise{
+from{opacity:0;transform:translateY(7px)}
+to{opacity:1;transform:none}
+}
 </style>
 </head>
+
 <body class="home-page">
-<header class="top"><div class="wrap nav">
-<a class="brand" href="index.html"><span class="logo">🔥</span><span>BotOfertas</span></a>
-<nav class="navlinks"><a class="active" href="index.html">Início</a><a href="pages/ofertas.html">Ofertas</a><a href="pages/como-funciona.html">Como funciona</a></nav>
-<div class="menu"><button class="dots" aria-label="Abrir menu">⋮</button><div class="drop"><a href="pages/categorias.html">🛒 Categorias</a><a href="pages/cupons.html">🎟️ Cupons</a><a href="pages/comunidade.html">💬 Comunidade</a><a href="pages/suporte.html">💬 Ajuda</a><a href="pages/faq.html">❓ Dúvidas</a></div></div>
-</div></header>
+
+<header class="top">
+<div class="wrap nav">
+
+<a class="brand" href="index.html">
+<span class="logo">🔥</span>
+<span>BotOfertas</span>
+</a>
+
+<nav class="navlinks">
+<a class="active" href="index.html">Início</a>
+<a href="ofertas.html">Ofertas</a>
+<a href="como-funciona.html">Como funciona</a>
+</nav>
+
+<div class="menu">
+<button class="dots" aria-label="Abrir menu">⋮</button>
+
+<div class="drop">
+<a href="categorias.html">🛒 Categorias</a>
+<a href="cupons.html">🎟️ Cupons</a>
+<a href="comunidade.html">💬 Comunidade</a>
+<a href="suporte.html">💬 Ajuda</a>
+<a href="faq.html">❓ Dúvidas</a>
+</div>
+</div>
+
+</div>
+</header>
+
 <main>
+
 <section class="wrap home-community">
-<div class="home-community-title"><span class="eyebrow">ENTRE NA COMUNIDADE</span><h1>Receba os achados do <em>BotOfertas.</em></h1><p>Escolha seu canal e acompanhe as ofertas direto por onde você já usa.</p></div>
+
+<div class="home-community-title">
+<span class="eyebrow">ENTRE NA COMUNIDADE</span>
+
+<h1>
+Receba os achados do <em>BotOfertas.</em>
+</h1>
+
+<p>
+Escolha seu canal e acompanhe as ofertas direto por onde você já usa.
+</p>
+</div>
+
 <div class="grid3 community-grid">
-<article class="community-card whatsapp"><div class="community-icon">💬</div><span class="community-label">WHATSAPP</span><h3>Comunidade principal</h3><p>Ofertas, cupons e novidades do BotOfertas.</p><a class="btn green" target="_blank" rel="noopener" href="https://chat.whatsapp.com/Id3EvNP7hPoFkKRGeo7KUa">Entrar na comunidade</a></article>
-<article class="community-card telegram"><div class="community-icon">✈️</div><span class="community-label">TELEGRAM</span><h3>Canal de ofertas</h3><p>Acompanhe os achados e alertas publicados pelo bot.</p><a class="btn blue" target="_blank" rel="noopener" href="https://t.me/+ghBFsZhCLo01ZTAx">Entrar no canal</a></article>
-<article class="community-card gamer"><div class="community-icon">🎮</div><span class="community-label">GAMER</span><h3>Games & tecnologia</h3><p>Achados de jogos, acessórios e tecnologia.</p><a class="btn yellow" target="_blank" rel="noopener" href="https://t.me/+EymHioEiIH5lNGUx">Entrar no canal gamer</a></article>
+
+<article class="community-card whatsapp">
+<div class="community-icon">💬</div>
+<span class="community-label">WHATSAPP</span>
+<h3>Comunidade principal</h3>
+<p>Ofertas, cupons e novidades do BotOfertas.</p>
+
+<a class="btn green" target="_blank" rel="noopener" href="https://chat.whatsapp.com/Id3EvNP7hPoFkKRGeo7KUa">
+Entrar na comunidade
+</a>
+</article>
+
+<article class="community-card telegram">
+<div class="community-icon">✈️</div>
+<span class="community-label">TELEGRAM</span>
+<h3>Canal de ofertas</h3>
+<p>Acompanhe os achados e alertas publicados pelo bot.</p>
+
+<a class="btn blue" target="_blank" rel="noopener" href="https://t.me/+ghBFsZhCLo01ZTAx">
+Entrar no canal
+</a>
+</article>
+
+<article class="community-card gamer">
+<div class="community-icon">🎮</div>
+<span class="community-label">GAMER</span>
+<h3>Games & tecnologia</h3>
+<p>Achados de jogos, acessórios e tecnologia.</p>
+
+<a class="btn yellow" target="_blank" rel="noopener" href="https://t.me/+EymHioEiIH5lNGUx">
+Entrar no canal gamer
+</a>
+</article>
+
 </div>
 </section>
-<section class="wrap home-hero"><span class="pill">🔥 OFERTAS • CUPONS • ACHADOS</span><h2>Você procura.<br><em>O BotOfertas encontra.</em></h2><p>Um jeito simples de acompanhar promoções e oportunidades sem precisar ficar procurando o tempo todo.</p><div class="actions"><a class="btn green btn-main" href="pages/ofertas.html">Ver ofertas</a></div></section>
-<section class="wrap section home-features"><div class="grid4"><div class="metric"><b>⚡</b><strong>Ofertas</strong><span>Achados para acompanhar.</span></div><div class="metric"><b>🎟️</b><strong>Cupons</strong><span>Descontos quando disponíveis.</span></div><div class="metric"><b>🛍️</b><strong>Categorias</strong><span>Games, tecnologia, casa e muito mais.</span></div><div class="metric"><b>📣</b><strong>Alertas</strong><span>Receba as novidades nos canais.</span></div></div></section>
+
+<section class="wrap home-hero">
+
+<span class="pill">🔥 OFERTAS • CUPONS • ACHADOS</span>
+
+<h2>
+Você procura.<br>
+<em>O BotOfertas encontra.</em>
+</h2>
+
+<p>
+Um jeito simples de acompanhar promoções e oportunidades sem precisar ficar procurando o tempo todo.
+</p>
+
+<div class="actions">
+<a class="btn green btn-main" href="ofertas.html">
+Ver ofertas
+</a>
+</div>
+
+</section>
+
+<section class="wrap section home-features">
+
+<div class="grid4">
+
+<div class="metric">
+<b>⚡</b>
+<strong>Ofertas</strong>
+<span>Achados para acompanhar.</span>
+</div>
+
+<div class="metric">
+<b>🎟️</b>
+<strong>Cupons</strong>
+<span>Descontos quando disponíveis.</span>
+</div>
+
+<div class="metric">
+<b>🛍️</b>
+<strong>Categorias</strong>
+<span>Games, tecnologia, casa e muito mais.</span>
+</div>
+
+<div class="metric">
+<b>📣</b>
+<strong>Alertas</strong>
+<span>Receba as novidades nos canais.</span>
+</div>
+
+</div>
+</section>
+
 </main>
-<footer class="footer"><div class="wrap footerbar"><span>© 2026 BotOfertas</span><span>Ofertas podem mudar conforme preço, estoque e validade.</span></div></footer>
-<button class="sound-toggle" type="button" aria-label="Ativar sons" title="Ativar sons"><span>🔇</span></button>
-<script src="assets/app.js"></script></body></html>
+
+<footer class="footer">
+<div class="wrap footerbar">
+<span>© 2026 BotOfertas</span>
+<span>Ofertas podem mudar conforme preço, estoque e validade.</span>
+</div>
+</footer>
+
+<button class="sound-toggle" type="button" aria-label="Ativar sons" title="Ativar sons">
+<span>🔇</span>
+</button>
+
+<script src="assets/app.js"></script>
+
+</body>
+</html>
+```
