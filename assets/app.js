@@ -1,32 +1,40 @@
 (() => {
-  const menu = document.querySelector('.menu');
-  const button = document.querySelector('.dots');
-  if (menu && button) {
-    button.addEventListener('click', e => { e.stopPropagation(); menu.classList.toggle('open'); playTone('click'); });
-    document.addEventListener('click', e => { if (!menu.contains(e.target)) menu.classList.remove('open'); });
+  const year = document.getElementById('year');
+  if (year) year.textContent = new Date().getFullYear();
+
+  const menuButton = document.querySelector('.menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  if (menuButton && mobileMenu) {
+    const closeMenu = () => {
+      mobileMenu.hidden = true;
+      menuButton.setAttribute('aria-expanded', 'false');
+      menuButton.setAttribute('aria-label', 'Abrir menu');
+    };
+    menuButton.addEventListener('click', () => {
+      const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', String(!isOpen));
+      menuButton.setAttribute('aria-label', isOpen ? 'Abrir menu' : 'Fechar menu');
+      mobileMenu.hidden = isOpen;
+    });
+    mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMenu(); });
+    document.addEventListener('click', event => {
+      if (!mobileMenu.hidden && !mobileMenu.contains(event.target) && !menuButton.contains(event.target)) closeMenu();
+    });
   }
 
-  let audioCtx = null;
-  let soundOn = localStorage.getItem('botofertas-sound') === 'on';
-  const soundBtn = document.querySelector('.sound-toggle');
-  const getCtx = () => audioCtx || (audioCtx = new (window.AudioContext || window.webkitAudioContext)());
-  function playTone(type='soft') {
-    if (!soundOn) return;
-    try {
-      const ctx=getCtx(); if(ctx.state==='suspended') ctx.resume();
-      const o=ctx.createOscillator(), g=ctx.createGain();
-      o.type='sine';
-      const now=ctx.currentTime;
-      const freq=type==='click'?520:type==='open'?660:420;
-      o.frequency.setValueAtTime(freq,now); o.frequency.exponentialRampToValueAtTime(freq*1.08,now+.07);
-      g.gain.setValueAtTime(.0001,now); g.gain.exponentialRampToValueAtTime(.025,now+.012); g.gain.exponentialRampToValueAtTime(.0001,now+.09);
-      o.connect(g); g.connect(ctx.destination); o.start(now); o.stop(now+.1);
-    } catch(e){}
+  const revealItems = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -35px 0px' });
+    revealItems.forEach(item => observer.observe(item));
+  } else {
+    revealItems.forEach(item => item.classList.add('is-visible'));
   }
-  function updateSound(){ if(!soundBtn)return; soundBtn.querySelector('span').textContent=soundOn?'🔊':'🔇'; soundBtn.setAttribute('aria-label',soundOn?'Desativar sons':'Ativar sons'); }
-  if(soundBtn){ updateSound(); soundBtn.addEventListener('click',()=>{soundOn=!soundOn;localStorage.setItem('botofertas-sound',soundOn?'on':'off');updateSound();if(soundOn)playTone('open');}); }
-
-  document.querySelectorAll('a.btn, .text-link, .drop a').forEach(el=>el.addEventListener('click',()=>playTone('click')));
-  document.querySelectorAll('.btn').forEach(el=>el.addEventListener('pointerenter',()=>playTone('soft'),{passive:true}));
-  document.querySelectorAll('.card,.community-card,.metric,.panel').forEach(el=>el.classList.add('lift-in'));
 })();
